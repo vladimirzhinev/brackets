@@ -25,10 +25,9 @@ module.exports = function check(str, bracketsConfig) {
          }
 
          else {
-            if (arrCloseBrackets.includes(currSymb)) {
+            if (arrCloseBrackets.includes(currSymb) && arrCloseBrackets.indexOf(currSymb) == arrOpenBrackets.indexOf(topEl)) {
                stack.pop();
             }
-
          }
       }
       // console.log(stack);
